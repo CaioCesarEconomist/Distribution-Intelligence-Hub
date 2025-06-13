@@ -23,5 +23,6 @@ This document tracks all major technical choices for transparency and future ref
 ## 6. Sample Dataset
 - Initial pipeline uses publicly available `2011_us_ag_exports.csv` from Plotly datasets.
 - CI with GitHub Actions runs `pytest` to validate transforms.
+- Apple stock data included for forecasting demos.
 
 *Add new decisions as the project evolves.*
