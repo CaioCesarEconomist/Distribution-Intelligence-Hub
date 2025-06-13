@@ -85,8 +85,8 @@ Distribution-Intelligence-Hub/
 
 1. Clone this repository.
 2. Install Python dependencies (`requirements.txt` coming soon).
-3. Place your raw datasets in `/data/raw/`.
-4. Run ETL scripts from `/etl/` to populate `/data/processed/`.
+3. Place your raw datasets in `/data/raw/` (sample sales data included).
+4. Execute `python etl/run_pipeline.py` to create `/data/processed/sales_summary.csv`.
 5. Open `dashboards/DistributionAnalytics.pbix` in Power BI Desktop.
 6. Explore and customize the dashboards.
 
