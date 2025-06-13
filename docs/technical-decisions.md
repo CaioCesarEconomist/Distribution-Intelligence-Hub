@@ -20,4 +20,8 @@ This document tracks all major technical choices for transparency and future ref
 ## 5. Documentation
 - All docs versioned and written in client-facing language.
 
+## 6. Sample Dataset
+- Initial pipeline uses publicly available `2011_us_ag_exports.csv` from Plotly datasets.
+- CI with GitHub Actions runs `pytest` to validate transforms.
+
 *Add new decisions as the project evolves.*
