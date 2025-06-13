@@ -1,12 +1,17 @@
 import pandas as pd
+import yaml
 from pathlib import Path
 
 RAW_DIR = Path('data/raw')
 PROCESSED_DIR = Path('data/processed')
+CONFIG_FILE = Path('src/config/config.yaml')
 PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
-RAW_FILE = RAW_DIR / 'sample_sales.csv'
-PROCESSED_FILE = PROCESSED_DIR / 'sales_summary.csv'
+with open(CONFIG_FILE) as cfg_file:
+    cfg = yaml.safe_load(cfg_file)
+
+RAW_FILE = RAW_DIR / cfg.get('raw_file', 'sample_sales.csv')
+PROCESSED_FILE = PROCESSED_DIR / cfg.get('processed_file', 'sales_summary.csv')
 
 
 def extract() -> pd.DataFrame:
